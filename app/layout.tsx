@@ -9,14 +9,14 @@ const IBMPlex = IBM_Plex_Sans({
   variable: "--font-ibm-plex",
   weight: "400 500 600 700 100 900",
 });
-const geistMono = IBM_Plex_Sans({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-ibm-plex",
-  weight: "400 500 600 700 100 900",
-});
+// const geistMono = IBM_Plex_Sans({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-ibm-plex",
+//   weight: "400 500 600 700 100 900",
+// });
 
 export const metadata: Metadata = {
-  title: "Nalipah",
+  title: "Imaginify",
   description: "An AI-powered image generator",
 };
 
