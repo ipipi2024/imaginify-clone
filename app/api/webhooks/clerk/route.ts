@@ -69,9 +69,10 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
-    const newUser = await createUser(user);
-
-    // Set public metadata
+    try {
+      const newUser = await createUser(user);
+      // Set public metadata...
+      // Set public metadata
     if (newUser) {
       await clerkClient.users.updateUserMetadata(id, {
         publicMetadata: {
@@ -81,6 +82,12 @@ export async function POST(req: Request) {
     }
 
     return NextResponse.json({ message: "OK", user: newUser });
+  } catch (error) {
+      console.error("Error creating user:", error);
+      return new Response("Error creating user", { status: 500 });
+  }
+
+    
   }
 
   // UPDATE
